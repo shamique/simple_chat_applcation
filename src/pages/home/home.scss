@@ -1,3 +1,53 @@
-page-home {
+.toolbar-background {
+  background-color: #30adde;
+}
 
+.toolbar-title-md {
+    padding: 0 12px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.chat-message {
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 18px;
+    position: relative;
+    margin: 10px;
+    max-width: 80%;
+}
+
+.chat-message:before {
+    content: "\00a0";
+    display: block;
+    height: 16px;
+    width: 9px;
+    position: absolute;
+    bottom: -7.5px;
+}
+
+.chat-message.right {
+    background-color: #488aff;
+    color: #fff;
+    float: right;
+}
+
+.chat-message.right:before {
+    background-color: #488aff;
+    right: 10px;
+    -webkit-transform: rotate(118deg) skew(-5deg);
+    transform: rotate(118deg) skew(-5deg);
+}
+
+.chat-message.left {
+    background-color: #e6e5eb;
+    float: left;
+    }
+
+.chat-message.left:before {
+    background-color: #e6e5eb;
+    left: 10px;
+    -webkit-transform: rotate(70deg) skew(5deg);
+    transform: rotate(70deg) skew(5deg);
 }

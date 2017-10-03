@@ -1,14 +1,25 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+       <ion-icon md="md-chatbubbles"></ion-icon> Chat Room
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div *ngFor="let message of chats">
+    <div [ngClass]="message.styleClass">
+	    <div class="message-detail">
+        {{message.msgStr}}
+	    </div>
+    </div>
+  </div>
+
 </ion-content>
+
+<ion-footer>
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="chat_input" placeholder="Enter message"></ion-input>
+    <ion-icon name="md-send" (click)="send(chat_input)" item-right></ion-icon>
+  </ion-item>
+</ion-footer>
