@@ -1,26 +1,22 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+This is source code of chat client. You need to create chat server as follow,
 
-## How to use this template
+var socket = require('socket.io'), http = require('http'),
+  server = http.createServer(), socket = socket.listen(server);
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+socket.on('connection', function(connection) {
+   console.log('User Connected');
+   
+   connection.on('message', function(msg){
+     socket.emit('message', msg);
+   });
+});
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+server.listen(3000, function(){
 
-### With the Ionic CLI:
+console.log('Server started');
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+});
 
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
-```
+Make sure to install socket.io plugin to node chat server. 
 
-Then, to run it, cd into `myBlank` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
-
+For detailed guidance on application visit : https://shamiquefarook.wordpress.com/2017/10/02/simple-chat-application-with-ionic-and-socket-io/
