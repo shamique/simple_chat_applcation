@@ -17,4 +17,8 @@ This is source code of chat client. You need to create chat server as follow,
 
 <b> Make sure to install socket.io plugin to node chat server.</b> 
 
-For detailed guidance on application visit : https://shamiquefarook.wordpress.com/2017/10/02/simple-chat-application-with-ionic-and-socket-io/
+For detailed guidance on application visit : 
+
+https://shamiquefarook.wordpress.com/2017/10/02/simple-chat-application-with-ionic-and-socket-io/
+
+https://medium.com/@shamique/simple-chat-application-using-ionic-and-socket-io-82d9b4605cc3
